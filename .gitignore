@@ -1,4 +1,3 @@
-.gitignore
 ei_deployed_model/*
 logs/
 saved_models/*

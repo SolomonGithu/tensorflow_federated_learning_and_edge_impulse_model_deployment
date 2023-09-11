@@ -19,12 +19,14 @@ For this, we use 2 devices to train a MobileNetV2 model to classify if an image 
 
 There are 4 dataset folders:
 - 2 folders for [client 1](datasets/dataset_client1/) and [client 2](datasets/dataset_client2/) with training and test images
-- 1 [folder](datasets/dataset_server/) with the server's test images that are used to evaluate models
+- 1 [folder](datasets/dataset_server/) with the server's test images that are used to evaluate models during the Federated Learning
 - 1 [folder](datasets/dataset_test/) with test images that we can give to the final global model and get its performance
 
 ## Quick Start
 
 Ensure you have Python on the devices that you want to run the Federated Learning. The server and client devices need to be connected to the same network. These devices can be PCs, and even System-on-Chip devices like the Raspberry Pi 4. You can also use the same computer as the server and clients.
+
+We need computers for the server and clients but you can also use the same computer as both the server and clients, provided the computer has enough resources to do that. The minimum number of required clients is two for the Federated Learning to occur. This minimum number can be modified in the ```server.py``` code but remember to also modify the ```client.py``` script to load dataset for the additional clients.
 
 If you have Python3 you can replace ```pip``` with ```pip3``` in the commands below.
 
@@ -44,7 +46,7 @@ pip install -r requirements_server.txt
 pip install -r requirements_client.txt
 ```
 
-4) Next, update ```server_address``` value in [server.py](server.py) and [client.py](client.py) with the IP address of the device running as the server. If you get an error message such as ```_ERROR_MESSAGE_PORT_BINDING_FAILED```, change the ```server_address``` port to another one that is available.
+4) Next, update ```server_address``` value in both [server.py](server.py) and [client.py](client.py) with the IP address of the device running as the server. If you get an error message such as ```_ERROR_MESSAGE_PORT_BINDING_FAILED```, change the server's port to another one that is available.
 
 5) Update ```ei.API_KEY``` in [server.py](server.py) with your [Edge Impulse project's API Key](https://edgeimpulse.readme.io/reference/edge-impulse-api#api-key).
 
@@ -64,7 +66,6 @@ python client.py --client_number=2
 ```
 
 9) Once the Federated Learning is complete, the final global model will be saved in the ```saved_models``` directory and also in your Edge Impulse project. We can test this model locally by running ```test_model.py```. To test the model on different images, you can change the images being loaded by ```test_image_head_path``` and ```test_image_hardhat_path``` in the [Python script](test_model.py).
-
 
 ## Warning
 

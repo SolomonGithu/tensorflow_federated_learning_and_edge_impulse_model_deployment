@@ -46,7 +46,7 @@ pip install -r requirements_server.txt
 pip install -r requirements_client.txt
 ```
 
-4) Next, update ```server_address``` value in both [server.py](server.py) and [client.py](client.py) with the IP address of the device running as the server. If you get an error message such as ```_ERROR_MESSAGE_PORT_BINDING_FAILED```, change the server's port to another one that is available.
+4) Next, update ```server_address``` value in both [server.py](server.py) and [client.py](client.py) with the IP address of the device running as the server. If you get an error message from ```server.py``` that says ```_ERROR_MESSAGE_PORT_BINDING_FAILED```, change the server's port to another one that is available.
 
 5) Update ```ei.API_KEY``` in [server.py](server.py) with your [Edge Impulse project's API Key](https://edgeimpulse.readme.io/reference/edge-impulse-api#api-key).
 

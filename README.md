@@ -24,7 +24,9 @@ There are 4 dataset folders:
 
 ## Quick Start
 
-Ensure you have Python on the devices that you want to run the Federated Learning. The server and client devices need to be connected to the same network. These devices can be PCs, and even System-on-Chip devices like the Raspberry Pi 4. If you have Python3 you can replace ```pip``` with ```pip3``` in the commands below.
+Ensure you have Python on the devices that you want to run the Federated Learning. The server and client devices need to be connected to the same network. These devices can be PCs, and even System-on-Chip devices like the Raspberry Pi 4. You can also use the same computer as the server and clients.
+
+If you have Python3 you can replace ```pip``` with ```pip3``` in the commands below.
 
 1) Start by cloning the repository on the device that will run as the server. For the client devices, we only need to copy to them the [datasets](datasets/) folder, [requirements_client.txt](requirements_client.txt) and [client.py](client.py). You can also clone the repository on the client devices, but this will load unnecessary files on them. 
 

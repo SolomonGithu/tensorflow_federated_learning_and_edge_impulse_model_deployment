@@ -2,6 +2,8 @@
 
 ![Cover image](media/cover_image.png)
 
+Please have a look at the [project's documentation](https://docs.edgeimpulse.com/experts/software-integration-demos/federated-learning-raspberry-pi) for a more detailed overview.
+
 This repository demonstrates how to use [Flower Federated Learning](https://flower.dev/docs/framework/tutorial-what-is-federated-learning.html) to train a TensorFlow model and deploy it to a wide range of devices by using [Edge Impulse Python SDK](https://docs.edgeimpulse.com/docs/tools/edge-impulse-python-sdk).
 
 The main characteristics of this architecture include:
